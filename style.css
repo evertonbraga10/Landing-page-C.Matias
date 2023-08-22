@@ -81,7 +81,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 32px;
 }
 
@@ -138,5 +138,6 @@ body{
 } */
 
 .main-conteudo-vid{
-    height: 350px;
+    height: 310px;
+    width: 600px;
 }
