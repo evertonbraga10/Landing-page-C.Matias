@@ -30,7 +30,7 @@ body{
     /* background-color: beige; */
     align-items: center;
     justify-content: space-evenly;
-    padding: 32px;
+    padding: 10px;
 }
 
 .header-img{
@@ -49,18 +49,14 @@ body{
     font-size: 18px;
 }
 
-
 .main{
-    margin-bottom: 48px;
     padding: 32px;
 }
 
-
 .main-principal{
-    /* background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%); */
     background: linear-gradient(68.15deg, #000000 16.62%, #3a322fd5 85.61%);
-    border-radius: 5px;
-    box-shadow: 0 3px 0 0 rgb(179, 179, 179) ;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,18 +74,13 @@ body{
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 50px;
-    color: beige;
+    color: #ffffff;
 }
 
 .main-conteudo-subtitulo{
     font-family: 'Times New Roman', Times, serif;
     color: transparent;
-    /* position: absolute; */
-    /* transform: translate(-50%,-50%); */
-    /* top: 50%;
-    left: 50%; */
     font-size: 24px;
-    /* letter-spacing: 5px; */
     font-weight: bold;
     background-image: linear-gradient(
         to left,
@@ -116,10 +107,6 @@ body{
     box-shadow: -3px 3px 0 0 gray;
 }
 
-/* .main-conteudo-logo{
-    height: 100px;
-} */
-
 .main-conteudo-vid{
     height: 310px;
     width: 560px;
@@ -135,9 +122,19 @@ body{
     }
     
 .efect-maq{
-        font-family: monospace;
-        border-right: 4px solid;
-        width: 29ch;
+        font-style: italic;
+        background-image: linear-gradient(
+        to left,
+        #462523 -125%,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 85%,
+        #462523 125%
+    );
+        /* border-right: 4px solid; */
+        width: 24ch;
         white-space: nowrap;
         overflow: hidden;
         animation: typing 2s steps(10), blinking 0.5s infinite step-end alternate;
@@ -145,31 +142,137 @@ body{
     }
 
 .conteudo-secundario{
-    
+    margin-top: 80px;
 }
 
-
-
-/* .conteudo-secundario-cards{
+.container{
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/sobremesas-22-logo-menor-2000x1321.jpg');
+    gap: 32px;
 }
 
 .card{
-    background-color: #b14242;
-    width: 250px;
-    height: 300px;
-    margin-left: 200px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     justify-content: center;
-} */
-
-/* .conteudo-secundario-titulo{
-
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(68.15deg, #000000 16.62%, #3a322fd5 85.61%);
+    transition: all .5s;
 }
 
-.conteudo-secundario-p{
+.card:hover{
+    background-image: linear-gradient(to top, #B8312F, #8f2927, #691e1c);
+}
 
-} */
+.card .img {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    background-image: url('img/churrasco-matias-600x353-99.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+    background-image: linear-gradient(
+        to left,
+        #462523 -125%,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 85%,
+        #462523 125%
+    );
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 180px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+.card .content .title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.card .content .desc {
+    font-size: 18px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+    display: flex;
+    text-align: center;
+}
+
+.card .arrow {
+    color: #ffffff;
+    padding: 10px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 28px;
+}
