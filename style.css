@@ -334,8 +334,9 @@ body{
 
 /* .rodape-titulo{
 
-}
+} */
 
 .rodape-link{
-
-} */
+    text-decoration: none;
+    color: #ffffff;
+}
