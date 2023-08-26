@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blinking {
-    50% {
-        border-color: transparent;
-    }
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
 }
 
 * {
@@ -50,6 +45,7 @@ body{
 
 .main{
     padding: 32px;
+    margin-bottom: 32px;
 }
 
 .main-principal{
@@ -85,65 +81,45 @@ body{
     color: transparent;
     font-size: 24px;
     font-weight: bold;
-    /* background-image: linear-gradient(
-        to left,
-        #462523 -125%,
-        #cb9b51 22%,
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 85%,
-        #462523 125%
-    ); */
     color: #ffffff;
-    -webkit-background-clip: text;
 }
 
 .main-conteudo-btn{
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    background-color: azure;
     width: 180px;
     height: 60px;
     border: none;
-    border-radius: 8px;
-    box-shadow: -3px 3px 0 0 gray;
+    position: relative;
+    background: #329737d3;
+    color: #ffffff;
+    border-radius: 16px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover{
+    background-color: #2db333;
+}
+
+.main-conteudo-btn:active{
+    transform: scale(0.96);
 }
 
 .main-conteudo-vid{
     height: 310px;
     width: 560px;
 }
-    
-.efect-center{
-        display: flex;
-        text-align: center;
-        padding: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-    
-.efect-maq{
-        font-style: italic;
-        background-image: linear-gradient(
-        to left,
-        #462523 -125%,
-        #cb9b51 22%,
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 85%,
-        #462523 125%
-    );
-        /* border-right: 4px solid; */
-        width: 24ch;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 2s steps(10), blinking 0.5s infinite step-end alternate;
-        font-size: 32px;
-    }
+
+.conteudo-span{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
 .conteudo-secundario{
     width: auto;
@@ -323,20 +299,63 @@ body{
 }
 
 .rodape{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    background-image: linear-gradient(68.15deg, #000000 16.62%, #3a322fd5 85.61%);
-    opacity: .8;
+    font-family: 'Sarala', sans-serif;
+    width: 100%;
     color: #ffffff;
+    background-image: linear-gradient(68.15deg, #000000 16.62%, #3a322fd5 85.61%);
+    text-align: center;
 }
-
-/* .rodape-titulo{
-
-} */
 
 .rodape-link{
     text-decoration: none;
-    color: #ffffff;
+}
+
+.rodape-social-midias{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: space-around;
+    padding: 32px;
+}
+
+.rodape-social-midias .rodape-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all, 0.4s;
+}
+
+.rodape-social-midias .rodape-link i{
+    font-size: 1.5rem;
+}
+
+.rodape-social-midias .rodape-link:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook{
+    background-color: #4267b3;
+}
+
+#whats{
+    background-color: #25d366;
+}
+
+.rodape-copy{
+    font-size: 12px;
 }
